@@ -9,20 +9,20 @@ exports.seed = function(knex) {
           id: 1,
           project_name: 'Finish Lambda School',
           project_description: 'complete LABS, computer science',
-          completed: 'false'
+          completed: false
         },
         {
           id: 2,
           project_name: 'Get A Good Paying Job',
           project_description: 'apply to many companies and got to interviews',
-          completed: 'false'
+          completed: false
         },
         {
           id: 3,
           project_name: 'Move to Italy',
           project_description:
             'find a piece of property and open a bed and breakfast with wife',
-          completed: 'false'
+          completed: false
         }
       ]);
     });
