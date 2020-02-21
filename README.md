@@ -40,11 +40,21 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+Relational Databases are databases that store their data in tables.
+
+Structured Query Language is the standard language used to manage databases and the data within them. It is the de facto way to interact with a database.
+
 - [ ] Why do tables need a `primary key`?
+
+The primary key is the field where both the not null and unique constraints will be enforced.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+Foreign key
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+We need to introduce an intermediary table that holds foreign keys that reference the primary key on the related tables.
 
 ## Minimum Viable Product
 
