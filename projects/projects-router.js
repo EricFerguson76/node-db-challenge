@@ -32,6 +32,16 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// router.get('/resources', (req, res) => {
+//   Projects.getResources()
+//     .then(projects => {
+//       res.json(projects);
+//     })
+//     .catch(err => {
+//       res.status(500).json({ message: 'Failed to get projects' });
+//     });
+// });
+
 router.get('/:id/resources', (req, res) => {
   const { id } = req.params;
 
@@ -82,7 +92,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/resources', (req, res) => {
   const projectsData = req.body;
 
   Projects.addResources(projectsData)
@@ -94,7 +104,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/tasks', (req, res) => {
   const projData = req.body;
 
   Projects.addTasks(projData)

@@ -22,16 +22,21 @@ function getById(id) {
 
 function getResources(id) {
   return db('project_details as pd')
-    .select('pd.project_id', 'r.id', 'r.name', 'r.description')
-    .join('resources as r', 'pd.resource_id, r.id')
+    .select(
+      'pd.project_id',
+      'r.id',
+      'r.resource_name',
+      'r.resource_description'
+    )
+    .join('resources as r', 'pd.resource_id', 'r.id')
     .where('pd.project_id', id);
 }
 
 function getTasks(id) {
   return db('tasks as t')
-    .select('t.id', 't.description', 't.notes', 't.completed')
+    .select('t.id', 't.task_description', 't.task_notes', 't.completed')
     .join('projects as p', 'p.id', 't.project_id')
-    .where('p.project_id', id);
+    .where('t.project_id', id);
 }
 
 function addProjects(project) {
