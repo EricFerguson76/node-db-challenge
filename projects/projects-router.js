@@ -83,9 +83,9 @@ router.post('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  const projectData = req.body;
+  const projectsData = req.body;
 
-  Projects.addResources(projectData)
+  Projects.addResources(projectsData)
     .then(project => {
       res.status(201).json(project);
     })
@@ -95,9 +95,9 @@ router.post('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  const projectData = req.body;
+  const projData = req.body;
 
-  Projects.addTasks(projectData)
+  Projects.addTasks(projData)
     .then(project => {
       res.status(201).json(project);
     })
